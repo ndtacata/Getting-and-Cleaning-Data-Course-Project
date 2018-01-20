@@ -25,6 +25,7 @@ PROCEDURE FOR DATA CLEANUP
   - subjectID column name is hardcoded to "subject"
   - activityID column name is hardcoded to "activity"
   - result column (measurement) name are set based on extracted data from features.txt
+5) Get the average of each variable for each activity and each subject and stored in an independent data set. 
 
 RESULTING DATA DESCRIPTION
 
