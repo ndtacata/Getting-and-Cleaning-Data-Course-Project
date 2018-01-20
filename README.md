@@ -13,5 +13,5 @@ NOTE: The script assumes that the data is already downloaded.
 6) Lastly, the script creates a tidy data set (tidy_data.txt) that consists of the average of each variable for each activity and each subject. The file is space delimited.
 
 To run the script:
-1) Compile run_analysis.R
-2) Type run_analysis() then press enter
+1) Compile script: source("run_analysis.R").
+2) Type run_analysis() then press enter.
