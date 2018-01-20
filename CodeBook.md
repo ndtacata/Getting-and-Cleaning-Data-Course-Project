@@ -41,8 +41,8 @@ The ff. files are important for this project:
 ## RESULTING DATA
 
 Column Names
-- activity
 - subject
+- activity
 - tBodyAcc-mean()-X
 - tBodyAcc-mean()-Y
 - tBodyAcc-mean()-Z
