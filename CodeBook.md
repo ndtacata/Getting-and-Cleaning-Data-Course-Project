@@ -20,7 +20,7 @@ PROCEDURE FOR DATA CLEANUP
 2) Data from files in 1-3 are then merged to create one data set to work with. 
   - Data output format (space sep):
   - subjectID activityID  result1 result2, ............................,  result N
-  
+3) Extract measurements with mean or std in measurement name. 
 3) To properly label the columns, the ff. are mapped:
   - subjectID column name is hardcoded to "subject"
   - activityID column name is hardcoded to "activity"
