@@ -21,10 +21,10 @@ PROCEDURE FOR DATA CLEANUP
   - Data output format (space sep):
   - subjectID activityID  result1 result2, ............................,  result N
 3) Extract measurements with mean or std in measurement name. 
-3) To properly label the columns, the ff. are mapped:
+4) To properly label the columns, the ff. are mapped:
   - subjectID column name is hardcoded to "subject"
   - activityID column name is hardcoded to "activity"
-  - result column (measurement) name are set to features.txt
+  - result column (measurement) name are set based on extracted data from features.txt
 
 RESULTING DATA DESCRIPTION
 
@@ -32,7 +32,7 @@ Identifier
 - activity
 - subject
 
-Measurement Names
+Measurement Names (result1, ..., result N)
 - tBodyAcc-mean()-X
 - tBodyAcc-mean()-Y
 - tBodyAcc-mean()-Z
