@@ -6,36 +6,36 @@ The ff. files are important for this project:
 1) X_train.txt and X_test.txt
     - contains data set for each training and test procedure
 2) y_test.txt and y_train.txt
-  - contains activity ID for each record in item #1
+    - contains activity ID for each record in item #1
 3) subject_train.txt and subject_test.txt
-  - contains the ID of the subject person/ test subject
+    - contains the ID of the subject person/ test subject
 4) features.txt
-  - contains list of all measurements used
+    - contains list of all measurements used
 5) activity_labels.txt
-  - consists the ID and description of the type of activity
+    - consists the ID and description of the type of activity
 
 
 ## PROCEDURE FOR DATA CLEANUP
 1) The files stated above are read and loaded into R. 
 2) Data from files in 1-3 are then merged to create one data set to work with. 
-  * Data output format (space sep):
-   __subjectID activityID  result1 result2, ............................,  result N__
+    - Data output format (space sep):
+                __subjectID activityID  result1 result2, ............................,  result N__
 3) Extract measurements with mean or std in measurement name
 4) To properly label the columns, the ff. are mapped:
-  * subjectID column name is hardcoded to "subject". The values are from subject_train.txt and subject_test.txt.
-  * activityID column name is hardcoded to "activity". The values are from y_test.txt and y_train.txt in which, it is then mapped to acitvity_labels.txt via ID.
+    - subjectID column name is hardcoded to "subject". The values are from subject_train.txt and subject_test.txt.
+    - activityID column name is hardcoded to "activity". The values are from y_test.txt and y_train.txt in which, it is then mapped to acitvity_labels.txt via ID. See ID setup below:
   
-  Activity Names
+                    Activity Names
 
-- ID    Description
-- 1     WALKING
-- 2     WALKING_UPSTAIRS
-- 3     WALKING_DOWNSTAIRS
-- 4     SITTING
-- 5     STANDING
-- 6     LAYING
+                    - ID    Description
+                    - 1     WALKING
+                    - 2     WALKING_UPSTAIRS
+                    - 3     WALKING_DOWNSTAIRS
+                    - 4     SITTING
+                    - 5     STANDING
+                    - 6     LAYING
 
-  - result column (measurement) name are set based on extracted data from features.txt
+    - result column (measurement) name are set based on extracted data from features.txt
 5) Get the average of each variable for each activity and each subject and stored in an independent data set. Output is tidy_data.txt 
 
 ## RESULTING DATA
