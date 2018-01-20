@@ -1,33 +1,44 @@
 This codebook describes the raw data used, the procedure on cleaning data and provides a brief description on the data in tidy_data.txt
 
-IMPORTANT FILES TO NOTE
+## IMPORTANT FILES TO NOTE
 
 The ff. files are important for this project:
 1) X_train.txt and X_test.txt
-    - contains resulting data set for each training and test procedure
+    - contains data set for each training and test procedure
 2) y_test.txt and y_train.txt
   - contains activity ID for each record in item #1
 3) subject_train.txt and subject_test.txt
   - contains the ID of the subject person/ test subject
 4) features.txt
-  - for clear description of this file, please read features_info.txt
+  - contains list of all measurements used
 5) activity_labels.txt
   - consists the ID and description of the type of activity
 
 
-PROCEDURE FOR DATA CLEANUP
+## PROCEDURE FOR DATA CLEANUP
 1) The files stated above are read and loaded into R. 
 2) Data from files in 1-3 are then merged to create one data set to work with. 
-  - Data output format (space sep):
-  - subjectID activityID  result1 result2, ............................,  result N
-3) Extract measurements with mean or std in measurement name. 
+  * Data output format (space sep):
+   __subjectID activityID  result1 result2, ............................,  result N__
+3) Extract measurements with mean or std in measurement name
 4) To properly label the columns, the ff. are mapped:
-  - subjectID column name is hardcoded to "subject"
-  - activityID column name is hardcoded to "activity"
+  * subjectID column name is hardcoded to "subject". The values are from subject_train.txt and subject_test.txt.
+  * activityID column name is hardcoded to "activity". The values are from y_test.txt and y_train.txt in which, it is then mapped to acitvity_labels.txt via ID.
+  
+  Activity Names
+
+- ID    Description
+- 1     WALKING
+- 2     WALKING_UPSTAIRS
+- 3     WALKING_DOWNSTAIRS
+- 4     SITTING
+- 5     STANDING
+- 6     LAYING
+
   - result column (measurement) name are set based on extracted data from features.txt
 5) Get the average of each variable for each activity and each subject and stored in an independent data set. Output is tidy_data.txt 
 
-RESULTING DATA
+## RESULTING DATA
 
 Column Names
 - activity
@@ -98,14 +109,3 @@ Column Names
 - fBodyBodyGyroMag-std()
 - fBodyBodyGyroJerkMag-mean()
 - fBodyBodyGyroJerkMag-std()
-
-
-Activity Names
-
-- ID    Description
-- 1     WALKING
-- 2     WALKING_UPSTAIRS
-- 3     WALKING_DOWNSTAIRS
-- 4     SITTING
-- 5     STANDING
-- 6     LAYING
