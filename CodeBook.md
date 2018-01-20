@@ -1,10 +1,10 @@
-This codebook summarizes the data in tidy_data.txt
+This codebook describes the raw data used, the procedure on cleaning data and provides a brief description on the data in tidy_data.txt
 
 IMPORTANT FILES TO NOTE
 
 The ff. files are important for this project:
 1) X_train.txt and X_test.txt
-  - contains resulting data set for each training and test procedure
+    - contains resulting data set for each training and test procedure
 2) y_test.txt and y_train.txt
   - contains activity ID for each record in item #1
 3) subject_train.txt and subject_test.txt
